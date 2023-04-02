@@ -33,7 +33,7 @@ export default function Settings() {
     // const formulaOptions = useGetFormulaOptions()
 
     const form = useForm<FormValues>({
-        initialValues: settings,
+        initialValues: { ...settings },
         validate: zodResolver(schema),
     })
 

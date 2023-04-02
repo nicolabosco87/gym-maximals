@@ -6,6 +6,7 @@ import { Show } from './pages/maximals/Show'
 import Formula from './pages/settings/Formula'
 import Settings from './pages/settings/Settings'
 import { Layout } from './ui/Layout'
+import { ErrorPage } from './pages/ErrorPage'
 
 const router = createBrowserRouter([
     {
@@ -53,6 +54,7 @@ const router = createBrowserRouter([
                 ],
             },
         ],
+        errorElement: <ErrorPage />,
     },
 ])
 

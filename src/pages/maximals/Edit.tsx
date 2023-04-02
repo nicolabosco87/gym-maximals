@@ -34,7 +34,7 @@ export const Edit = () => {
                     Edit Maximal
                 </SectionTitle>
                 <MaximalForm
-                    initialValues={maximal}
+                    initialValues={{ ...maximal }}
                     onSubmit={onSubmit}
                     submitLabel="Edit"
                 />
