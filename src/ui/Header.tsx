@@ -10,7 +10,7 @@ import {
     Title,
 } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
-import Link from 'next/link'
+import { Link } from 'react-router-dom'
 
 const HEADER_HEIGHT = 60
 
@@ -107,7 +107,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
     const items = links.map((link) => (
         <Link
             key={link.label}
-            href={link.link}
+            to={link.link}
             className={cx(classes.link, {
                 [classes.linkActive]: active === link.link,
             })}
