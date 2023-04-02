@@ -11,6 +11,7 @@ specifiers:
   '@types/node': ^18.15.11
   '@types/react': ^18.0.31
   '@types/react-dom': ^18.0.11
+  '@types/slug': ^5.0.3
   '@vitejs/plugin-react': ^3.1.0
   eslint: ^8.37.0
   eslint-config-next: ^13.2.4
@@ -18,6 +19,7 @@ specifiers:
   react-dom: ^18.2.0
   react-icons: ^4.8.0
   react-router-dom: ^6.10.0
+  slug: ^8.2.2
   typescript: ^5.0.3
   valtio: ^1.10.3
   vite: ^4.2.1
@@ -38,6 +40,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.8.0_react@18.2.0
   react-router-dom: 6.10.0_biqbaboplfbrettd7655fr4n2y
+  slug: 8.2.2
   valtio: 1.10.3_react@18.2.0
   zod: 3.21.4
 
@@ -45,6 +48,7 @@ devDependencies:
   '@types/node': 18.15.11
   '@types/react': 18.0.31
   '@types/react-dom': 18.0.11
+  '@types/slug': 5.0.3
   '@vitejs/plugin-react': 3.1.0_vite@4.2.1
   typescript: 5.0.3
   vite: 4.2.1_@types+node@18.15.11
@@ -2053,6 +2057,10 @@ packages:
 
   /@types/scheduler/0.16.3:
     resolution: {integrity: sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==}
+
+  /@types/slug/5.0.3:
+    resolution: {integrity: sha512-yPX0bb1SvrpaGlHuSiz6EicgRI4VBE+LO7IANlZagQwtaoKjLLcZc8y6s13vKp41mYvMCSzjtObxvU7/0JRPaA==}
+    dev: true
 
   /@types/trusted-types/2.0.3:
     resolution: {integrity: sha512-NfQ4gyz38SL8sDNrSixxU2Os1a5xcdFxipAFxYEuLUlvU2uDwS4NUpsImcf1//SlWItCVMMLiylsxbmNMToV/g==}
@@ -4251,6 +4259,11 @@ packages:
   /slash/4.0.0:
     resolution: {integrity: sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==}
     engines: {node: '>=12'}
+    dev: false
+
+  /slug/8.2.2:
+    resolution: {integrity: sha512-5ByW6qXqPeG0Tmlkh24JhdXhvQsbaJSjVr3GgGxUV0BSskZKKBZZfFWxezap8+fh1vxBN9GVbqI1V6nqAFxlBg==}
+    hasBin: true
     dev: false
 
   /source-map-js/1.0.2:

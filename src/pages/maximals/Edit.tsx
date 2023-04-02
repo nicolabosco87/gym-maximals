@@ -1,5 +1,4 @@
 import { notifications } from '@mantine/notifications'
-import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useSnapshot } from 'valtio'
 import {

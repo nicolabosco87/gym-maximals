@@ -1,6 +1,7 @@
 import { notifications } from '@mantine/notifications'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import slug from 'slug'
 import {
     MaximalForm,
     MaximalFormValues,
@@ -13,7 +14,7 @@ export const Add = () => {
     const navigate = useNavigate()
 
     const onSubmit = (values: MaximalFormValues) => {
-        addMaximal({ ...values, slug: encodeURIComponent(values.label) })
+        addMaximal(values)
         navigate('/')
         notifications.show({
             message: 'Maximal added',
