@@ -118,6 +118,15 @@ export const Show = () => {
                         </Flex>
 
                         <Table striped>
+                            <thead>
+                                <tr>
+                                    <th>Percentage</th>
+                                    <th>Weight at %</th>
+                                    {maximal.considerWeight && (
+                                        <th>Minus body-weight</th>
+                                    )}
+                                </tr>
+                            </thead>
                             <tbody>
                                 {percentages.map((perc) => (
                                     <tr key={perc}>
@@ -128,6 +137,16 @@ export const Show = () => {
                                             )}{' '}
                                             kg
                                         </td>
+                                        {maximal.considerWeight && (
+                                            <td>
+                                                {formatNumber(
+                                                    ((maxValue -
+                                                        settings.currentWeight) /
+                                                        100) *
+                                                        perc
+                                                )}
+                                            </td>
+                                        )}
                                     </tr>
                                 ))}
                             </tbody>

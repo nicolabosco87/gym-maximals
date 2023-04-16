@@ -13,6 +13,7 @@ type FormValues = {
     weightUnit: 'kg' | 'lb'
     listStep: '10' | '5'
     hideStepsBelow: number
+    currentWeight: number
 }
 
 const schema = z.object({
@@ -26,11 +27,9 @@ const schema = z.object({
 
 export default function Settings() {
     const { settings } = useSnapshot(state)
-    // const router = useRouter()
     const navigate = useNavigate()
 
     const formulas = useFormulas()
-    // const formulaOptions = useGetFormulaOptions()
 
     const form = useForm<FormValues>({
         initialValues: { ...settings },
@@ -104,6 +103,15 @@ export default function Settings() {
                                 min={0}
                                 max={99}
                                 {...form.getInputProps('hideStepsBelow')}
+                            />
+                        </Grid.Col>
+                        <Grid.Col>
+                            <NumberInput
+                                label="Current weight"
+                                placeholder="Enter current weight"
+                                min={0}
+                                max={999}
+                                {...form.getInputProps('currentWeight')}
                             />
                         </Grid.Col>
                     </Grid>

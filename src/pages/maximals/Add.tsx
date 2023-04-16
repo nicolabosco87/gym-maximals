@@ -29,6 +29,7 @@ export const Add = () => {
                     label: '',
                     reps: 0,
                     weight: 0,
+                    considerWeight: false,
                 }}
                 onSubmit={onSubmit}
             />

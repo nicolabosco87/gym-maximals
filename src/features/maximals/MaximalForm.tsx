@@ -1,4 +1,4 @@
-import { Button, Group, NumberInput, TextInput } from '@mantine/core'
+import { Button, Checkbox, Group, NumberInput, TextInput } from '@mantine/core'
 import { useForm, zodResolver } from '@mantine/form'
 import React from 'react'
 import { z } from 'zod'
@@ -7,6 +7,7 @@ export type MaximalFormValues = {
     label: string
     weight: number
     reps: number
+    considerWeight: boolean
 }
 
 const schema = z.object({
@@ -52,6 +53,15 @@ export const MaximalForm = ({
                 placeholder="Reps"
                 {...form.getInputProps('reps')}
             />
+
+            <Checkbox
+                label="Consider weight"
+                description="Consider this maximal with body-weight in it, common in StreetLifting"
+                {...form.getInputProps('considerWeight', {
+                    type: 'checkbox',
+                })}
+            />
+
             <Group position="right" mt="xl">
                 <Button type="submit">{submitLabel}</Button>
             </Group>

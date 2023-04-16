@@ -10,6 +10,7 @@ export type Maximal = {
     label: string
     weight: number
     reps: number
+    considerWeight: boolean
 }
 
 export enum FormulaType {
@@ -24,6 +25,7 @@ export type Settings = {
     weightUnit: 'kg' | 'lb'
     listStep: '10' | '5'
     hideStepsBelow: number
+    currentWeight: number
 }
 
 type State = {
@@ -42,6 +44,7 @@ const initialState: State = {
         listStep: '10',
         weightUnit: 'kg',
         hideStepsBelow: 0,
+        currentWeight: 0,
     },
 }
 
