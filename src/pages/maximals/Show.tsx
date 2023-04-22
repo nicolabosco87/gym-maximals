@@ -140,10 +140,8 @@ export const Show = () => {
                                         {maximal.considerWeight && (
                                             <td>
                                                 {formatNumber(
-                                                    ((maxValue -
-                                                        settings.currentWeight) /
-                                                        100) *
-                                                        perc
+                                                    (maxValue / 100) * perc -
+                                                        settings.currentWeight
                                                 )}
                                             </td>
                                         )}
